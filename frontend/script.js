@@ -1,3 +1,4 @@
+
 const API_BASE = 'https://api-playground-nine.vercel.app/';  // Update to hosted URL after deployment
 
 async function fetchAPI(endpoint) {
