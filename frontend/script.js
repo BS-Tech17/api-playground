@@ -3,7 +3,10 @@ const API_BASE = 'https://api-playground-nine.vercel.app/';  // Update to backen
 
 async function fetchAPI(endpoint) {
     const response = await fetch(`${API_BASE}${endpoint}`);
-    if (!response.ok) throw new Error('API error');
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`API error: ${response.status} - ${errorText}`);
+    }
     return await response.json();
 }
 
