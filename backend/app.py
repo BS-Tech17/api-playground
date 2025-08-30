@@ -45,4 +45,4 @@ def top_skills():
 
 @app.get("/search")
 def search_query(q: str = Query(...)):
-    return search(q) 
+    return search(q) add delete method
