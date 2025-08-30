@@ -1,12 +1,3 @@
-def delete_profile():
-    conn = get_db()
-    cursor = conn.cursor()
-    cursor.execute("DELETE FROM profile WHERE id=1 RETURNING id")
-    deleted = cursor.fetchone()
-    conn.commit()
-    cursor.close()
-    conn.close()
-    return deleted is not None
 import psycopg2
 from psycopg2.extras import Json
 from pydantic import BaseModel
