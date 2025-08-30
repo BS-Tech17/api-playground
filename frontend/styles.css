@@ -1,5 +1,64 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-section { margin-bottom: 20px; }
-pre { background: #f4f4f4; padding: 10px; border-radius: 5px; border: 1px solid #ddd; }
-input { padding: 5px; margin-right: 10px; }
-button { padding: 5px 10px; }
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f6ff; /* light blue-white background */
+    color: #002244; /* dark navy text */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0044cc;
+    margin-bottom: 30px;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #003399;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #007bff; /* blue */
+    color: white;
+    font-size: 18px; /* larger text */
+    padding: 12px 24px; /* bigger button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* darker blue on hover */
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+pre {
+    background: #eef5ff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
