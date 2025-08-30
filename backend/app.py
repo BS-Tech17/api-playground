@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from backend.database import Profile, get_profile, create_or_update_profile, get_projects_by_skill, get_top_skills, search, delete_profile
+from backend.database import Profile, get_profile, create_or_update_profile, get_projects_by_skill, get_top_skills, search
 from typing import Optional
 
 app = FastAPI()
@@ -21,7 +21,7 @@ def health():
 def read_profile():
     profile = get_profile()
     if not profile:
-        raise HTTPException(status_code=404, detail="Profile not found")
+        return {"error": "Profile not found"}
     return profile
 
 @app.post("/profile", response_model=Profile)
@@ -31,13 +31,6 @@ def create_profile(profile: Profile):
 @app.put("/profile", response_model=Profile)
 def update_profile(profile: Profile):
     return create_or_update_profile(profile)
-
-@app.delete("/profile")
-def delete_profile():
-    success = delete_profile()
-    if not success:
-        raise HTTPException(status_code=404, detail="Profile not found")
-    return {"message": "Profile deleted successfully"}
 
 @app.get("/projects")
 def projects_by_skill(skill: Optional[str] = Query(None)):
