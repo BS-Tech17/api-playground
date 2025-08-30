@@ -1,5 +1,32 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-section { margin-bottom: 20px; }
-pre { background: #f4f4f4; padding: 10px; border-radius: 5px; border: 1px solid #ddd; }
-input { padding: 5px; margin-right: 10px; }
-button { padding: 5px 10px; }
+body {
+    font-family: Arial, sans-serif;
+}
+
+#profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#profile-table th, #profile-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+#profile-table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+}
+
+#profile-table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #e5e7eb;
+    white-space: pre-wrap;
+}
