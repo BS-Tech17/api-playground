@@ -42,4 +42,4 @@ async function generalSearch() {
     } catch (e) {
         document.getElementById('search-output').textContent = `Error: ${e.message}`;
     }
-} 
+}
