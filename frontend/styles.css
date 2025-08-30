@@ -1,1 +1,5 @@
- 
+body { font-family: Arial, sans-serif; margin: 20px; }
+section { margin-bottom: 20px; }
+pre { background: #f4f4f4; padding: 10px; border-radius: 5px; border: 1px solid #ddd; }
+input { padding: 5px; margin-right: 10px; }
+button { padding: 5px 10px; } 
