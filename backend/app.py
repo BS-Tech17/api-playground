@@ -1,24 +1,7 @@
-
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from backend.database import Profile, get_profile, create_or_update_profile, get_projects_by_skill, get_top_skills, search, delete_profile
+from backend.database import Profile, get_profile, create_or_update_profile, get_projects_by_skill, get_top_skills, search
 from typing import Optional
-app = FastAPI()
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Update to frontend URL in prod
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-@app.delete("/profile")
-def delete_profile_endpoint():
-    result = delete_profile()
-    if result:
-        return {"message": "Profile deleted"}
-    return {"error": "Profile not found or could not be deleted"}
 
 app = FastAPI()
 
