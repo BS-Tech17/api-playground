@@ -2,38 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Me-API Playground</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>My Profile Playground</h1>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <header class="w-full bg-blue-600 text-white py-4 text-center">
+        <h1 class="text-3xl font-bold">Me-API Playground</h1>
+    </header>
+    <main class="max-w-4xl w-full p-6 space-y-6">
+        <!-- Profile Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">View Profile</h2>
+            <button onclick="viewProfile()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Load Profile</button>
+            <div id="profile-output" class="mt-4"></div>
+        </section>
 
-    <section>
-        <h2><u>View Profile</u></h2>
-        <button onclick="viewProfile()">Load Profile</button>
-        <pre id="profile-output"></pre>
-    </section>
+        <!-- Projects Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">List Projects</h2>
+            <button onclick="listProjects()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Load All Projects</button>
+            <div id="projects-output" class="mt-4"></div>
+        </section>
 
-    <section>
-        <h2>List Projects</h2>
-        <button onclick="listProjects()">Load All Projects</button>
-        <pre id="projects-output"></pre>
-    </section>
+        <!-- Skill Search Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Search Projects by Skill</h2>
+            <div class="flex space-x-2">
+                <input type="text" id="skill-input" placeholder="e.g., Python" class="border p-2 rounded w-full">
+                <button onclick="searchBySkill()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Search Projects</button>
+            </div>
+            <div id="skill-output" class="mt-4"></div>
+        </section>
 
-    <section>
-        <h2>Search by Skill</h2>
-        <input type="text" id="skill-input" placeholder="e.g., Python">
-        <button onclick="searchBySkill()">Search Projects</button>
-        <pre id="skill-output"></pre>
-    </section>
+        <!-- General Search Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">General Search</h2>
+            <div class="flex space-x-2">
+                <input type="text" id="search-input" placeholder="e.g., AI" class="border p-2 rounded w-full">
+                <button onclick="generalSearch()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Search</button>
+            </div>
+            <div id="search-output" class="mt-4"></div>
+        </section>
 
-    <section>
-        <h2>General Search</h2>
-        <input type="text" id="search-input" placeholder="e.g., AI">
-        <button onclick="generalSearch()">Search</button>
-        <pre id="search-output"></pre>
-    </section>
-
+        <!-- Top Skills Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Top Skills</h2>
+            <button onclick="getTopSkills()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Load Top Skills</button>
+            <div id="skills-output" class="mt-4"></div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
