@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8000https://api-playground-nine.vercel.app/';  // Update to hosted URL after deployment
+const API_BASE = 'http://localhost:8000';  // Update to hosted URL after deployment
 
 async function fetchAPI(endpoint) {
     const response = await fetch(`${API_BASE}${endpoint}`);
