@@ -1,4 +1,4 @@
-const API_BASE = 'https://api-playground-nine.vercel.app/';  // Update to hosted URL after deployment
+const API_BASE = 'https://api-playground-jx1gvb9gh-bhoomika-saxena-s-projects.vercel.app/';  // Update to hosted URL after deployment
 
 async function fetchAPI(endpoint) {
     const response = await fetch(`${API_BASE}${endpoint}`);
